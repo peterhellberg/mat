@@ -23,18 +23,21 @@ Or install it yourself as:
 It is probably a good idea to take a look in `specs`
 
 ```ruby
-# All nutrients
-Mat.nutrients
-
 # Find the first food with ’köttfärs’ in the name
-köttfärspaj = Mat.all('Köttfärs').first
+food = Mat.all('Köttfärs').first
+
+# You can also pass a search query to the find method
+food = Mat.find('Köttfärs')
 
 # Get the `iron` value
-köttfärspaj.iron #=> 1.09
+food.iron #=> 1.09
 
 # Find a specific food by its number
 food = Mat.find(3)
 food.name #=> "Ister gris"
+
+# You can also list all nutrients
+Mat.nutrients
 ```
 
 ## Contributing
