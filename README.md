@@ -4,6 +4,8 @@ A small (unofficial) API client for the [Mat API](http://matapi.se/).
 
 The documentation is in Swedish, but so is the [data](http://www.slv.se/sv/grupp1/mat-och-naring/vad-innehaller-maten/livsmedelsdatabasen-/).
 
+[![Build Status](https://travis-ci.org/peterhellberg/mat.png?branch=master)](https://travis-ci.org/peterhellberg/mat)
+
 ## Installation
 
 Add this line to your application's Gemfile:
