@@ -23,7 +23,7 @@ module Mat
     end
 
     def name
-      data['name']
+      data['name'].to_s.strip
     end
 
     def number
