@@ -1,20 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'mat'
-require 'json'
+require_relative '../lib/mat/cli'
 
-def get_data(query)
-  if query.match(/^\d+$/)
-    Mat.api.foodstuff(query)
-  else
-    Mat.api.foodstuffs(query)
-  end
-end
-
-def search(query)
-  puts JSON.pretty_generate get_data(query)
-rescue Mat::HTTP::Exception
-  warn "Nothing found"
-end
-
-search(ARGV.first) if ARGV.any?
+Mat::CLI.search(ARGV.first) if ARGV.any?
