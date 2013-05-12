@@ -12,8 +12,8 @@ describe Mat do
       api.config.base_url.must_equal "api.test"
     end
 
-    it "does not memoize the api client" do
-      subject.api.object_id.wont_equal subject.api.object_id
+    it "memoizes the api client" do
+      subject.api.object_id.must_equal subject.api.object_id
     end
 
     it "can configure the base_url" do

@@ -9,7 +9,7 @@ require_relative "mat/version"
 module Mat
   class << self
     def api(config = nil)
-      API.new(config).tap do |api|
+      (@api ||= API.new config).tap do |api|
         yield(api.config) if block_given?
       end
     end
