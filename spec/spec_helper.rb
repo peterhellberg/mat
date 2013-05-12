@@ -2,9 +2,11 @@
 
 require "minitest/autorun"
 require "minitest/spec"
+require "minitest/hell"
 require "minitest/pride"
 
 require_relative "../lib/mat"
+require_relative "../lib/mat/cli"
 
 $loaded_fixtures = {}
 $parsed_fixtures = {}
