@@ -7,7 +7,7 @@ module Mat
         new get_data(number, nutrient)
       end
 
-      def all(query)
+      def all(query = '')
         Mat.api.foodstuffs(query).map { |d| new(d) }
       end
 
